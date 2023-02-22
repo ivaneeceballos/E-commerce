@@ -35,8 +35,8 @@ body {
 
 /* nav */
 .contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
+    max-width: 100rem;
+    margin: auto;
 }
 
 .sombra {
@@ -149,6 +149,55 @@ h3 {
     display: flex;
     align-items: flex-end;
 }
+
+/*  servicios display grid */
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicios p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+    }
+}
+
+/* servicios display grid */
+
+/*formulario contactos */
+.formulario {
+    background-color: var(--gris);
+    width: min (60rem, 100%); /* utiliza el valor mas pequeño */
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+/* fin formulario contactos */
 
 /* fin main */
 
