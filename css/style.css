@@ -6,25 +6,69 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DEF9F3;
 }
 
+/* globales */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    /*hack para box model */
 }
 
 *,
+/*hack para box model */
 *:before,
+/*hack para box model */
 *:after {
+    /*hack para box model */
     box-sizing: inherit;
+    /*hack para box model */
 }
 
 body {
     font-size: 16px;
     /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
+/* nav */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 18px 3px rgba(112, 112, 112, 1);
+    -moz-box-shadow: 0px 5px 18px 3px rgba(112, 112, 112, 1);
+    box-shadow: 0px 5px 18px 3px rgba(112, 112, 112, 1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+/* fuentes */
 h1 {
     font-size: 3.8rem;
 }
@@ -44,17 +88,12 @@ h3 {
     /* text-transform: uppercase; */
 }
 
-/* span */
+/* titulo y span */
 .titulo span {
     font-size: 2rem;
 }
 
-/* nav */
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
+/* navegacion principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -80,13 +119,14 @@ h3 {
     color: var(--oscuro);
 }
 
-/* main */
+/* hero */
 .hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 410px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -105,6 +145,10 @@ h3 {
     color: var(--blanco);
 }
 
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
 
 /* fin main */
 
